@@ -10,23 +10,44 @@ sentence="Hello, I'm Mario!"
 #%%Variables Exercise4
 amount=2.14
 
-#Variables Exercise5
+#%%Variables Exercise5
+var_1=True
+var_2=True
+var_3=True
 
 
+#%%Variables Exercise6
+name='Mario'
+variable=f'1my-first2_Name = {name}'
+characters=['1','-','2']
+for character in characters:
+    variable = variable.replace(character, '')
+#%%Variables Exercise7
+"Hi,my name is John Doe"
 
-#Variables Exercise6
+"python"
 
-#Variables Exercise7
+#%%Variables Exercise8
+a=2
+b=3
+c=4
+print(a,b,c)
+#%%Variables Exercise9
+a = 12
+b = 'Hello'
+print(a, b)
+c = a
+a = b
+b = c
+print(a,b)
 
-
-#Variables Exercise8
-
-
-#Variables Exercise9
-
-
-#Variables Exercise10
-
+#%%Variables Exercise10
+hello = 'Hello!'
+name = 'Jhon Doe'
+age = '40'
+print(hello,'has lenght = ',len(hello))
+print(name,'has lenght = ',len(name))
+print(age,'has lenght  = ',len(age))
 #%%Variables Exercise11 I should come back to this 
 a = 'hello' #capitalize
 a=a.capitalize()
@@ -40,10 +61,11 @@ age_question = 'How old are you?' #use the correct method to create a string for
 age_question=age_question.split(' ')
 print(a, b, c, question, age_question)
 
-#Variables Exercise12
-
-
-
+#%%Variables Exercise12
+name='Julien'
+age=12
+hello = "Hello, {}. You are {}".format(name,age)
+print(hello)
 #%%Methods Exercise1 comme back to this too
 print(type("Hello World"))
 print(type(True))
