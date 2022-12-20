@@ -48,6 +48,7 @@ age = '40'
 print(hello,'has lenght = ',len(hello))
 print(name,'has lenght = ',len(name))
 print(age,'has lenght  = ',len(age))
+
 #%%Variables Exercise11 I should come back to this 
 a = 'hello' #capitalize
 a=a.capitalize()
@@ -62,10 +63,43 @@ age_question=age_question.split(' ')
 print(a, b, c, question, age_question)
 
 #%%Variables Exercise12
-name='Julien'
-age=12
+name = 'Julien'
+age = 12
 hello = "Hello, {}. You are {}".format(name,age)
 print(hello)
+
+#%%Operators Exercise-1
+print(False and True) # Should print False
+
+#%%Operators Exercise-2
+print(False or (0 != 0 or True)) # Should print True
+
+
+#%%Operators Exercise-3
+a = 5 % 2
+print('the rest of the division 5/2 is ',a)
+
+#%%Operators Exercise-4
+print(not ("testing" == "testing" and "Mario" == "Cool Guy")) # Should print True
+
+
+#%%Operators Exercise-5 come back to this too
+firstName = "Mario"
+lastName = "Rossi"
+sentence = f'{firstName} {lastName}'
+print(sentence) # Should print "Mario Rossi"
+
+
+#%%Operators Exercise-6
+brands = ["Adidas", "Nike"]
+print("Nike" in brands) # Should print True
+
+
+#%%Operators Exercise-7
+brands = ["Adidas", "Nike"]
+print("Reebok" not in brands) # Should print True
+
+
 #%%Methods Exercise1 comme back to this too
 print(type("Hello World"))
 print(type(True))
@@ -86,17 +120,17 @@ num3 = 1j
 num4 = 1.4 
 num5 = 1.5
 
-num1=float(num1)
-num2=int(num2)
-num3=complex(num3)
-num4=round(num4)
-num5=round(num5)
+num1 = float(num1)
+num2 = int(num2)
+num3 = complex(num3)
+num4 = round(num4)
+num5 = round(num5)
 print(num1,num2,num3,num4,num5)
 print(type(num1),type(num2),type(num3),type(num4),type(num5))
+
 #%%Methods Exercise3
 num1 = 1122334455666
-
-num1_str=str(num1)
+num1_str = str(num1)
 len(num1_str)
 num1_str[2]
 num1_str[2:5]
