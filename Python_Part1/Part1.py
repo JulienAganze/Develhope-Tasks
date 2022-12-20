@@ -5,7 +5,7 @@ firstName='Mario'
 age=25
 
 #%%Variables Exercise3
-sentence="Hello, I'm Mario!" 
+sentence= 'Hello, I\'m Mario!'
 
 #%%Variables Exercise4
 amount=2.14
