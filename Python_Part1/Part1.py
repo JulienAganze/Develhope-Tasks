@@ -24,7 +24,6 @@ for character in characters:
     variable = variable.replace(character, '')
 #%%Variables Exercise7
 "Hi,my name is John Doe"
-
 "python"
 
 #%%Variables Exercise8
@@ -119,7 +118,6 @@ num2 = 2.3
 num3 = 1j 
 num4 = 1.4 
 num5 = 1.5
-
 num1 = float(num1)
 num2 = int(num2)
 num3 = complex(num3)
