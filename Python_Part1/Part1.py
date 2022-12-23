@@ -133,4 +133,45 @@ len(num1_str)
 num1_str[2]
 num1_str[2:5]
 
+#%% Conditions Exercise1
+num1 = 335
+num2 = 66
 
+if num1 > num2:
+    print(f"{num1} is greater than {num2}")
+else:
+    print(f"{num1} is not greater than {num2}")
+
+#%% Conditions Exercise2
+number1 = 11
+number2 = 11
+if number1 > number2:
+    print(number1,'is greater than',number2)
+elif number1 < number2:
+    print(number2,'is greater than',number1)
+else:
+    print(number1,'is equal to',number2)
+    
+#%% Conditions Exercise3
+import random
+number1 = random.randint(1,100)
+number2 = random.randint(1,100)
+if number1 > number2:
+    print(number1,'is greater than',number2)
+elif number1 < number2:
+    print(number2,'is greater than',number1)
+else:
+    print(number1,'is equal to',number2)
+
+#%% Conditions Exercise4
+import random
+x = random.randint(-100,100)
+y = random.randint(-100,100)
+if abs(x) > abs(y):
+    print('x\'s absolute value',abs(x),' grater than y\'s',abs(y))
+elif abs(x) < abs(y):
+    print('y\'s absolute value ',abs(y),'grater than x\'s',abs(x))
+else:
+    print('x\'s absolute value ',abs(x),'is equal to y\'s',abs(y))
+    
+    
