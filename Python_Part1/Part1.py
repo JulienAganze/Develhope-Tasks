@@ -132,6 +132,12 @@ num1_str = str(num1)
 len(num1_str)
 num1_str[2]
 num1_str[2:5]
+str(num2) in str(num1)
+str(num3) in str(num1)
+string_with_O = 'O' + str(num1)
+string_with_O[0:5]
+string_with_O[5:len(string_with_O)]
+string_with_O[-9:-6]
 
 #%% Conditions Exercise1
 num1 = 335
