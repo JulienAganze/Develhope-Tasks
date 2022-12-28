@@ -394,7 +394,6 @@ child3 = {
   "name" : "Linus",
   "year" : 2011
 }
-
 myfamily = {
   "child1" : child1,
   "child2" : child2,
