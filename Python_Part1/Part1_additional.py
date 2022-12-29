@@ -400,3 +400,158 @@ myfamily = {
   "child3" : child3
 }
 print(myfamily)
+
+
+#%% CONDITIONALS
+#%% IF ELSE
+a = 0
+b = 0
+print('a is greater than b') if a > b  else print('b is greater than a') if a < b else print('a equals b')
+#%% IF ELSE
+a = 33
+b = 200
+if b > a:
+  pass
+#%% WHILLE LOOP
+b = 1
+while b < 11:
+  b += 1
+  if b == 5:
+      break
+  print(b)
+#%% WHILLE LOOP
+b = 1
+while b < 11:
+  if b == 5:
+      break
+  b += 1
+  print(b)
+  #%% WHILLE LOOP
+  b = 1
+  while b < 11:
+    b += 1
+    if b == 5 or b == 6:
+        continue
+    print(b)
+#%% WHILLE LOOP
+b = 1
+while b < 11:
+  print(b)
+  b += 1
+else:
+    print('b is no longer less than 11')
+    
+    
+#%% FOR LOOP
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+#%% FOR LOOP
+fruits = 'banana'
+for x in fruits:
+    print(x)
+#%% FOR LOOP
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+    if x == 'banana':
+        break
+#%% FOR LOOP
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    
+    if x == 'banana':
+        continue
+    print(x)
+#%% FOR LOOP
+
+for x in range(1,10,3):
+    print(x)
+#%% FOR LOOP
+fruits = 'banana'
+for x in fruits:
+    if x == 'n':break
+    print(x)
+else:
+    print('done')
+#%% FOR LOOP   
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+for a in adj:
+    #print(a)
+    for b in fruits:
+        print(a,b)
+#%% FOR LOOP   
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+for a in adj:
+    pass
+
+
+#%% PYTHON FUNCTIONS
+a =int(input('enter the value of a: '))
+b =int(input('enter the value of b: '))
+def multi(a,b):
+    c = a * b
+    return c
+print('the product of',a,'and',b,'is equal to: ',multi(a,b))
+#%% PYTHON FUNCTIONS
+def my_function():
+  print("Hello from a function")
+my_function()
+#%% PYTHON FUNCTIONS
+def my_function(fname,lname):
+  print("your firstname is: ",fname+ ' ' + lname)
+my_function('Julien','Aganze')
+#%% PYTHON FUNCTIONS
+def my_function(*fname):
+  print("your firstname is: ",fname[0]+ ' ' + fname[1])
+my_function('Julien','Aganze')
+#%% PYTHON FUNCTIONS
+def my_function(fname,lname):
+  print("your firstname is: ",fname + ' ' + lname)
+my_function(fname='Julien', lname='Aganze')
+#%% PYTHON FUNCTIONS
+def my_function(**fname):
+  print("your firstname is: ",fname['fname'] + ' ' + fname['lname'])
+my_function(fname ='Julien',lname ='Aganze')
+#%% PYTHON FUNCTIONS
+def my_function(fname = 'Josue'):
+  print("your firstname is: ",fname)
+my_function('Julien')
+my_function('Aganze')
+my_function()
+my_function('Chambali')
+#%% PYTHON FUNCTIONS
+def my_function(food):
+  for x in food:
+    print(x)
+
+fruits = ["apple", "banana", "cherry"]
+
+my_function(fruits)
+#%% PYTHON FUNCTIONS
+def my_function(name):
+    for x in name:
+        print(x)
+fname = ['Julien', 'Aganze']
+my_function(fname)
+#%% PYTHON FUNCTIONS
+def my_function(a):
+    return(a + 10)
+print(my_function(12))
+#%% PYTHON FUNCTIONS
+def my_function(a):
+   pass
+#%% PYTHON FUNCTIONS
+def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+    
