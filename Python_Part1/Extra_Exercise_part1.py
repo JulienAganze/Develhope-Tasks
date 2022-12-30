@@ -204,7 +204,130 @@ print('the number of elements greater than 70 is',b)
 #%% Exercise3 MINE
 guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
 guests.sort()
-print(guests)
+print('The sorted list: ',guests)
 guests.reverse()
+print('The reverse sorted list: ',guests)
+#%% Exercise3 MINE   SORTED
+guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
+sorted_guest = []
+while guests:
+    first = guests[0]
+    for i in guests:
+        if i < first:
+            first = i
+    print(first)
+    sorted_guest.append(first)
+    print(sorted_guest)
+    guests.remove(first)
+    print(guests)
+#%% Exercise3 MINE REVERSE SORTED
+guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
+sorted_guest = []
+while guests:
+    first = guests[0]
+    for i in guests:
+        if i > first:
+            first = i
+    print(first)
+    sorted_guest.append(first)
+    print(sorted_guest)
+    guests.remove(first)
+    print(guests)
+#%% Exercise3 PROPOSED   SORTED
+guests = ['James', 'Mary', 'John', 'Patricia', 'Robert', 'Jennifer']
+guests.sort()
+guests.sort(reverse = True)
+#guests.reverse()
 print(guests)
 
+
+#%% EXERCISE1 FUNCTIONS MINE
+import random
+guests = []
+for x in range(20):
+    guests.append(random.randint(0,100))
+def mymax(list1):
+    while list1:
+        first = list1[0]
+        for i in list1:
+            if i > first:
+                first = i
+        
+        return first
+print(guests)
+print(mymax(guests))
+#%% EXERCISE 1 FUNCTIONS PROPOSED
+import random
+list_of_num = [random.randint(1,100) for _ in range (0,20)]
+def find_highest(aList):
+    highest=aList[0]
+    for element in aList:
+        if element > highest:
+            highest = element
+    return(highest)
+print(find_highest(list_of_num))
+#%% EXERCISE2 FUNCTIONS MINE VERY CORRECT ALTERNATIVE
+import random
+list1 = []
+for x in range(20):
+    list1.append(random.randint(0,100))
+def even(list2):
+    list3 = []
+    for x in list2:
+        if x%2 == 0:
+            list3.append(x)
+            
+    return list3
+print(list1)
+print(even(list1))
+#%% EXERCISE2 FUNCTIONS PROPOSED
+import random
+list_of_num = [random.randint(1,100) for _ in range (0,20)] # creating the list
+# Solution
+def even_position (aList):
+    even_pos=[]
+    for i in range(0,len(aList)):
+        if i%2==0:
+            even_pos.append(aList[i])
+    return even_pos
+# Check
+if __name__ == "__main__":
+    print(even_position(list_of_num))
+#%% EXERCISE2 FUNCTIONS MINE VERY CORRECT SOLUTION
+import random
+list1 = []
+for x in range(20):
+    list1.append(random.randint(0,100))
+def even(list2):
+    list3 = []
+    for x in range(len(list2)):
+        if x%2 == 0:
+            list3.append(list2[x])
+            
+    return list3
+print(list1)
+print(even(list1))
+#%% EXERCISE3 FUNCTIONS MINE
+import random
+x = random.randint(0,10)
+L = lambda x : x + 2
+print(x)
+print(L(x))
+#%% EXERCISE3 FUNCTIONS MINE
+import random
+x = int(input('Enter the variable: '))
+L = lambda x : x + 2
+print(x)
+print(L(x))
+#%% EXERCISE3 FUNCTIONS MINE
+
+x = int(input('Enter the variable: '))
+def myfunction(x):
+    return lambda x : x + 2
+print(x)
+adding_2 = myfunction(x)
+print(adding_2(x))
+#%% EXERCISE3 FUNCTIONS PROPOSED
+i = 8
+L = lambda x : x + 2
+print(L(i))
