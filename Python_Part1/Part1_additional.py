@@ -554,4 +554,29 @@ def tri_recursion(k):
 
 print("\n\nRecursion Example Results")
 tri_recursion(6)
+
+
+#%% LAMBDA FUNCTION
+x = lambda a,b : a+b
+print(x(5,5))
+#%% LAMBDA FUNCTION
+import random
+list1=2
+a = random.randint(0,10)
+def myeven(list1):
+    x = lambda a : a * list1
+    #print(x(5,5))
+    return x(a)
+print(myeven(list1))
+#%% LAMBDA FUNCTION
+import random
+list2=2
+a = random.randint(0,10)
+def myeven(list1):
+    return lambda a : a * list1
+doubler = myeven(2)
+tripler = myeven(3)
+print(a)
+print(doubler(a))
+print(tripler(a))
     
