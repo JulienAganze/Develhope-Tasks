@@ -214,6 +214,7 @@ list1 = []
 while True:
     c = 0
     x = int(input('enter the number: '))
+    
     list1.append(x)
     print(list1)
     for a in range(len(list1)):
@@ -226,3 +227,24 @@ while True:
     if str(x) == 'Going home':
         print('Today you did not reach your goal')
         break
+#%% EXERCISE4  WORKING WELL SOMEHOW
+#b = 0
+list1 = []
+while True:
+    c = 0
+    x = input('enter the number: ').capitalize()
+    if str(x) == 'Going home':
+        print(x)
+        print('Today you did not reach your goal')
+        break
+    list1.append(int(x))
+    print(list1)
+    for a in range(len(list1)):
+        b = list1[a]
+        c += b
+    print(c)
+    if c >= 10000:
+        print('Good job Ana you reached 10 000steps')
+        break
+
+#%% EXERCISE5
