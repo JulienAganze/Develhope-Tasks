@@ -247,4 +247,85 @@ while True:
         print('Good job Ana you reached 10 000steps')
         break
 
-#%% EXERCISE5
+
+
+
+#%% EXERCISE 5 
+a = 0
+b = 1
+for c in range(2,31):
+    c = a + b
+    print(c)
+    a = b
+    b = c
+#%% EXERCISE5  WORKING VERY VERY WELL
+e = int(input('Enter the first number: '))
+f = int(input('Enter the first number: '))
+def fibonacci(x,y):
+    a = 0
+    b = 1
+    list1 = []
+    for d in range(1,y):
+            
+                c = a + b
+                a = b
+                b = c
+                if c in range (x+1,y):
+                    #print(c)
+                    list1.append(c)
+            
+    return print(list1)    
+fibonacci(e, f)
+
+
+#%% EXERCISE 8 WORKING WELL SOLUTION VERY VERY WELL
+username = input('Enter your user name: ')
+password = input('Enter your password: ')
+special = '!@#$%^'
+if len(password) < 8:
+    print('Password INVALID')
+else:
+    if username in password:
+        print('Password INVALID')
+    else:
+        a = 0
+        b = 0
+        c = 0
+        for i in password:
+            
+            if i.isupper():
+                a = a + 1
+            
+                
+            if i.isnumeric():
+                b = b + 1
+            
+            
+            if i in special:
+                c = c + 1
+           
+        
+        if (a != 0) and (b != 0) and (c != 0):
+            print('Password OK')
+        else:
+            print('Password INVALID')
+            
+
+
+
+#%% EXERCISE 7 
+list1 = [ 3, 100 ]
+x = len(list1)
+list2 = []
+for i in range(list1[x-1]):
+     #print(i)
+     a = i
+     a = a + 1
+     if a not in list1:
+         print(a)
+         list2.append(a)
+print(list2)     
+
+
+
+    
