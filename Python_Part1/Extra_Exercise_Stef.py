@@ -63,7 +63,7 @@ def myfunction(x):
     return print('the total bonus is: ',total_bonus,'and the total points are: ',total_point)
 myfunction(a)
 
-#%% EXERCISE3 LONG VERSION WORKIN WELL TOO
+#%% EXERCISE3 SOLUTION 1 LONG VERSION WORKIN WELL TOO
 a = str(input('Enter the season: ').lower())
 b = int(input('Tnter the number of people: '))
 
@@ -158,7 +158,7 @@ def seasons(season,people):
         
     return print('The final price is: ',final_price,'$')
 seasons(a,b)    
-#%% EXERCISE3 SHORT VERSION WORKIN WELL
+#%% EXERCISE3 SOLUTION 2 SHORT VERSION WORKIN WELL
 a = str(input('Enter the season: ').lower())
 b = int(input('Tnter the number of people: '))
 dict1 = {'spring' : 3000,'summer': 4200,'autumn': 4200 ,'winter': 2600}
@@ -208,31 +208,13 @@ def seasons(season,people):
     return print('The final price is: ',final_price,'$')
 seasons(a,b)          
 
-#%% EXERCISE4 
-#b = 0
-list1 = []
-while True:
-    c = 0
-    x = int(input('enter the number: '))
-    
-    list1.append(x)
-    print(list1)
-    for a in range(len(list1)):
-        b = list1[a]
-        c += b
-    print(c)
-    if c == 10000:
-        print('Good job Ana you reached 10 000steps')
-        break
-    if str(x) == 'Going home':
-        print('Today you did not reach your goal')
-        break
+
 #%% EXERCISE4  WORKING WELL SOMEHOW
 #b = 0
 list1 = []
 while True:
     c = 0
-    x = input('enter the number: ').capitalize()
+    x = input('enter the steps: ').capitalize()
     if str(x) == 'Going home':
         print(x)
         print('Today you did not reach your goal')
@@ -244,20 +226,13 @@ while True:
         c += b
     print(c)
     if c >= 10000:
-        print('Good job Ana you reached 10 000steps')
+        print('Good job Ana you reached 10 000 steps')
         break
 
 
 
 
-#%% EXERCISE 5 
-a = 0
-b = 1
-for c in range(2,31):
-    c = a + b
-    print(c)
-    a = b
-    b = c
+
 #%% EXERCISE5  WORKING VERY VERY WELL
 e = int(input('Enter the first number: '))
 f = int(input('Enter the first number: '))
@@ -278,7 +253,7 @@ def fibonacci(x,y):
 fibonacci(e, f)
 
 
-#%% EXERCISE 8 WORKING WELL SOLUTION VERY VERY WELL
+#%% EXERCISE 6 WORKING WELL SOLUTION VERY VERY WELL
 username = input('Enter your user name: ')
 password = input('Enter your password: ')
 special = '!@#$%^'
