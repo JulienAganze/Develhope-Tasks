@@ -297,7 +297,7 @@ for i in range(list1[x-1]):
      a = i
      a = a + 1
      if a not in list1:
-         print(a)
+         #print(a)
          list2.append(a)
 print(list2)     
 
