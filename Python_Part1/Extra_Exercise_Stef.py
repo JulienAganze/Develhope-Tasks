@@ -4,160 +4,40 @@ time_second = int(input('Enter time two: '))
 time_third = int(input('Enter time three: '))
 def myfunction(a,b,c):
     total = a + b + c
-    minutes = total / 60
+    minutes = round(total / 60)
     seconds = total % 60
-    x = print('The time taken in format MINUTE:SECOND is',round(minutes),'minute(s)',':',seconds,'seconds')   
+    if seconds < 10:
+        x = print(f'The time taken in format MINUTE:SECOND is {minutes}:0{seconds}')   
+    else:
+        x = print(f'The time taken in format MINUTE:SECOND is {minutes}:{seconds}') 
     return x
 myfunction(time_first,time_second,time_third)
 
-
-
-
 #%% EXERCISE2 RETHINK ABOUT A SHORTER SOLUTION ---------------I HAVE TO COME BACK TO THIS
 a = int(input('Enter the number x: '))
-#bonus1 = 0
-#bonus2 = 0
-def myfunction(x):
-    if x % 2 ==0:
-        bonus1 = 1
-        if x <= 100:
-            bonus2 = 5
-            total_bonus = bonus1 + bonus2
-            total_point = x+bonus1+bonus2
-        elif (x > 100) and (x <= 1000):
-            bonus2 = x*0.2
-            total_bonus = bonus1 + bonus2
-            total_point = x+bonus1+bonus2
-        elif x > 1000:
-            bonus2 = x*0.1
-            total_bonus = bonus1 + bonus2
-            total_point = x+bonus1+bonus2
-    elif x % 5 == 0:
-        bonus1 = 2
-        if x <= 100:
-            bonus2 = 5
-            total_bonus = bonus1 + bonus2
-            total_point = x+bonus1+bonus2
-        elif (x > 100) and (x <= 1000):
-            bonus2 = x*0.2
-            total_bonus = bonus1 + bonus2
-            total_point = x+bonus1+bonus2
-        elif x > 1000:
-            bonus2 = x*0.1
-            total_bonus = bonus1 + bonus2
-            total_point = x+bonus1+bonus2
-    else:
-        bonus1 = 0
-        if x <= 100:
-            bonus2 = 5
-            total_bonus = bonus1 + bonus2
-            total_point = x+bonus1+bonus2
-        elif (x > 100) and (x <= 1000):
-            bonus2 = x*0.2
-            total_bonus = bonus1 + bonus2
-            total_point = x+bonus1+bonus2
-        elif x > 1000:
-            bonus2 = x*0.1
-            total_bonus = bonus1 + bonus2
-            total_point = x+bonus1+bonus2
-    return print('the total bonus is: ',total_bonus,'and the total points are: ',total_point)
-myfunction(a)
+if a % 2 == 0:
+    bonus1 = 1
+elif a % 5 == 0:
+    bonus1 = 2
+else:
+    bonus1 =0
+def myfunction(x,bonus1):            
+            if x <= 100:
+                bonus2 = 5
+                total_bonus = bonus1 + bonus2
+                total_point = x+bonus1+bonus2
+            elif (x > 100) and (x <= 1000):
+                bonus2 = x*0.2
+                total_bonus = bonus1 + bonus2
+                total_point = x+bonus1+bonus2
+            elif x > 1000:
+                bonus2 = x*0.1
+                total_bonus = bonus1 + bonus2
+                total_point = x+bonus1+bonus2
+            return print('the total bonus is: ',total_bonus,'and the total points are: ',total_point)
+myfunction(a,bonus1)
 
-#%% EXERCISE3 SOLUTION 1 LONG VERSION WORKIN WELL TOO
-a = str(input('Enter the season: ').lower())
-b = int(input('Tnter the number of people: '))
-
-#discount = 0
-def seasons(season,people):
-    if season == 'spring':
-        price1 = 3000
-        if people % 2 == 0:
-            discount2 = 0.05
-            if people <= 6:
-                discount = 0.1
-                final_price = price1 - (price1 * discount) - (price1 * discount2)
-            elif people in range(7,12):
-                discount = 0.15
-                final_price = price1 - (price1 * discount) - (price1 * discount2)
-            elif people > 11:
-                discount = 0.25
-                final_price = price1 - (price1 * discount) - (price1 * discount2)
-        else:
-            if people <= 6:
-                discount = 0.1
-                final_price = price1 - (price1 * discount)
-            elif people in range(7,12):
-                discount = 0.15
-                final_price = price1 - (price1 * discount)
-            elif people > 11:
-                discount = 0.25
-                final_price = price1 - (price1 * discount)
-            
-    elif season == 'autumn':
-        price1 = 4200
-        if people <= 6:
-            discount = 0.1
-            final_price = price1 - (price1 * discount)
-        elif people in range(7,12):
-            discount = 0.15
-            final_price = price1 - (price1 * discount)
-        elif people > 11:
-            discount = 0.25
-            final_price = price1 - (price1 * discount)
-            
-    elif season == 'winter':
-        price1 = 2600
-        if people % 2 == 0:
-            discount2 = 0.05
-            if people <= 6:
-                discount = 0.1
-                final_price = price1 - (price1 * discount) - (price1 * discount2)
-            elif people in range(7,12):
-                discount = 0.15
-                final_price = price1 - (price1 * discount) - (price1 * discount2)
-            elif people > 11:
-                discount = 0.25
-                final_price = price1 - (price1 * discount) - (price1 * discount2)
-        else:
-            if people <= 6:
-                discount = 0.1
-                final_price = price1 - (price1 * discount)
-            elif people in range(7,12):
-                discount = 0.15
-                final_price = price1 - (price1 * discount)
-            elif people > 11:
-                discount = 0.25
-                final_price = price1 - (price1 * discount)
-                
-    elif season == 'summer':
-        price1 = 4200
-        if people % 2 == 0:
-            discount2 = 0.05
-            if people <= 6:
-                discount = 0.1
-                final_price = price1 - (price1 * discount) - (price1 * discount2)
-            elif people in range(7,12):
-                discount = 0.15
-                final_price = price1 - (price1 * discount) - (price1 * discount2)
-            elif people > 11:
-                discount = 0.25
-                final_price = price1 - (price1 * discount) - (price1 * discount2)
-        else:
-            if people <= 6:
-                discount = 0.1
-                final_price = price1 - (price1 * discount)
-            elif people in range(7,12):
-                discount = 0.15
-                final_price = price1 - (price1 * discount)
-            elif people > 11:
-                discount = 0.25
-                final_price = price1 - (price1 * discount)
-    
-    else:
-        print('enter the correct season')
-        
-    return print('The final price is: ',final_price,'$')
-seasons(a,b)    
+   
 #%% EXERCISE3 SOLUTION 2 SHORT VERSION WORKIN WELL
 a = str(input('Enter the season: ').lower())
 b = int(input('Tnter the number of people: '))
@@ -235,32 +115,33 @@ while True:
 
 #%% EXERCISE5  WORKING VERY VERY WELL
 e = int(input('Enter the first number: '))
-f = int(input('Enter the first number: '))
+f = int(input('Enter the second number: '))
 def fibonacci(x,y):
     a = 0
     b = 1
     list1 = []
-    for d in range(1,y):
+    for d in range(0,y):
             
                 c = a + b
                 a = b
-                b = c
-                if c in range (x+1,y):
+                #b = c
+                
+                if a in range (x+1,y):
                     #print(c)
-                    list1.append(c)
-            
+                        list1.append(a)
+                b = c
     return print(list1)    
 fibonacci(e, f)
 
 
 #%% EXERCISE 6 WORKING WELL SOLUTION VERY VERY WELL
-username = input('Enter your user name: ')
+username = input('Enter your username: ')
 password = input('Enter your password: ')
 special = '!@#$%^'
 if len(password) < 8:
     print('Password INVALID')
 else:
-    if username in password:
+    if username.lower() in password.lower():
         print('Password INVALID')
     else:
         a = 0
@@ -288,19 +169,18 @@ else:
 
 
 
-#%% EXERCISE 7 
-list1 = [ 3, 100 ]
+     
+
+
+#%%
+list1 = [ 5,3,10 ]
+list1.sort()
 x = len(list1)
 list2 = []
-for i in range(list1[x-1]):
-     #print(i)
-     a = i
-     a = a + 1
-     if a not in list1:
+for i in range(list1[0],list1[x-1]):
+     if i not in list1:
          #print(a)
-         list2.append(a)
-print(list2)     
-
-
-
+         list2.append(i)
+print(list2)  
+  
     
