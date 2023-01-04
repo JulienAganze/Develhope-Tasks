@@ -135,9 +135,10 @@ fibonacci(e, f)
 
 
 #%% EXERCISE 6 WORKING WELL SOLUTION VERY VERY WELL
+from string import punctuation
 username = input('Enter your username: ')
 password = input('Enter your password: ')
-special = '!@#$%^'
+special = str(punctuation)
 if len(password) < 8:
     print('Password INVALID')
 else:
