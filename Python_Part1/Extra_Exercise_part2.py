@@ -14,7 +14,8 @@ else:
     print(x,' is not an amstrong number')
         
 
-
+#%%
+print('Hello')
 
 
 
@@ -42,6 +43,7 @@ for a in alphabet:
 if len(list1) == 26:
     print('this is a pagnant sentence')
 else:
+
     print('this is not a pagnant sentence')
     
 
@@ -65,16 +67,154 @@ def myfunction(sentence):
     return list1
 print(myfunction(x))
 
+#%%  EXERCISE 4
+import math as m
+the_list = [1,2,3,4,5,67]
+the_list.sort()
+search = 1
+list1 = []
+list2 = []
+for i in the_list:
+    middle_index = m.floor( (0 + len(the_list)) / 2)
+    if the_list[middle_index] == search:
+        print('The number you are searching for is: ',the_list[middle_index])
+        
+    elif the_list[middle_index] < search:
+        middle_index = m.floor( (0 + (middle_index-1)) / 2)
+        for a in range(0,middle_index+1):
+           
+            list1.append(a)
+        if list1[middle_index] == search:
+                print('The number you are searching for is: ',list1[middle_index])
+            
+    elif the_list[middle_index] > search:
+        middle_index = m.floor((middle_index+1) + len(the_list) / 2)
+        for b in range(middle_index,len(the_list)):
+           
+            list1.append(b)
+        
+        if list2[middle_index] == search:
+                print('The number you are searching for is: ',list2[middle_index])
+            
+            
+#%%  EXERCISE 4
+import math as m
+the_list = [1,2,3,4,5,67]
+the_list.sort()
+search = 1
+list1 = []
+list2 = []
+
+middle_index = m.floor( (0 + len(the_list)) / 2)
+if the_list[middle_index] == search:
+            print('The number you are searching for is: ',the_list[middle_index])
+            
+elif the_list[middle_index] < search:
+            middle_index = m.floor( (0 + (middle_index-1)) / 2)
+            for a in range(0,middle_index+1):
+               
+                list1.append(a)
+            if list1[middle_index] == search:
+                    print('The number you are searching for is: ',list1[middle_index])
+                
+elif the_list[middle_index] > search:
+            middle_index = m.floor((middle_index+1) + len(the_list) / 2)
+            for b in range(middle_index,len(the_list)):
+               
+                list1.append(b)
+            
+            if list2[middle_index] == search:
+                    print('The number you are searching for is: ',list2[middle_index])
+                
+                
+#%%  EXERCISE 4
+import math as m
+the_list = [1,2,3,4,5,67]
+the_list.sort()
+x = len(the_list)
+search = 1
+list1 = []
+list2 = []
+newlist = []
+
+middle_index = m.floor( (0 + x) / 2)
+if the_list[middle_index] == search:
+                print('The number you are searching for is: ',the_list[middle_index])
+                
+elif the_list[middle_index] > search:
+                for a in range(0,middle_index):
+                   
+                    list1.append(the_list[a])
+                newlist = list1.copy()
+                middle_index = m.floor( (0 + (middle_index-1)) / 2)
+                
+                if newlist[middle_index] == search:
+                        print('The number you are searching for is: ',list1[middle_index])
+                    
+elif the_list[middle_index] < search:
+                for b in range(middle_index+1,x):
+                   
+                    list2.append(the_list[b])
+                newlist = list2.copy()
+                middle_index = m.floor(((middle_index+1) + x) / 2)
+                
+                if newlist[middle_index] == search:
+                        print('The number you are searching for is: ',list2[middle_index])
+                
+            
+#%%  EXERCISE 4
+import math as m
+the_list = [1,2,3,4,5,67]
+the_list.sort()
+x = len(the_list)
+search = 1
+list1 = []
+list2 = []
+newlist = []
 
 
+middle_index = m.floor( (0 + x) / 2)
+if the_list[middle_index] == search:
+                print('The number you are searching for is: ',the_list[middle_index])        
 
+elif the_list[middle_index] > search:
+                for a in range(0,middle_index):
+                   
+                    list1.append(the_list[a])
+                newlist = list1.copy()
+                middle_index = m.floor( (0 + (middle_index-1)) / 2)
+                
+                if newlist[middle_index] == search:
+                        print('The number you are searching for is: ',list1[middle_index])
+                
+#%%  EXERCISE 4
+import math as m
+the_list = [1,2,3,4,5,67]
+the_list.sort()
+x = len(the_list)
+search = 1
+list1 = []
+list2 = []
+newlist = []
 
-
+def middle(the_list,search):
+    if the_list[middle_index] == search:
+                  return  print('The number you are searching for is: ',the_list[middle_index])
                       
         
+def leftside(the_list,search):
+    if the_list[middle_index] > search:
+                    for a in range(0,middle_index):
+                       
+                        list1.append(the_list[a])
+                    newlist = list1.copy()
+                    middle_index = m.floor( (0 + (middle_index-1)) / 2)
+                    
+                    if newlist[middle_index] == search:
+                            print('The number you are searching for is: ',list1[middle_index])
+                        
     
-    
-    
+ Maybe I sould be returning the index instead 
                         
                            
-                            
+
