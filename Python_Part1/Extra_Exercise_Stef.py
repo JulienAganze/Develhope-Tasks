@@ -173,7 +173,7 @@ else:
      
 
 
-#%%
+#%% EXERCISE 7
 list1 = [ 5,3,10 ]
 list1.sort()
 x = len(list1)
@@ -184,4 +184,37 @@ for i in range(list1[0],list1[x-1]):
          list2.append(i)
 print(list2)  
   
-    
+#%% EXERCISE 7 
+list1 = [ 3,60,100 ]
+x = len(list1)
+list2 = []
+for i in range(list1[0],list1[x-1]):
+     #print(i)
+     a = i
+     a = a + 1
+     if a not in list1:
+         #print(a)
+         list2.append(a)
+print(list2)
+
+#%%
+list1 = [ 3,10 ]
+x = len(list1)
+list2 = []
+if i not in list1:
+         #print(a)
+         list2.append(i)
+print(list2)
+ 
+#%% EXERCISE 7
+list1 = [ 5,3,10 ]
+list1.sort()
+x = len(list1)
+list2 = []
+i = 0
+while (list1[0] < i)and (i <list1[x-1]):
+     if i not in list1:
+         #print(a)
+         list2.append(i)
+     i = i +1
+print(list2)  zz
