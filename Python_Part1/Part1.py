@@ -180,4 +180,8 @@ elif abs(x) < abs(y):
 else:
     print('x\'s absolute value ',abs(x),'is equal to y\'s',abs(y))
     
-    
+#%%
+name = 'Mike'
+age = 30
+hello = f'Hello, {name}. You are {age}'
+print(hello)    
