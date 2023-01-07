@@ -579,4 +579,25 @@ tripler = myeven(3)
 print(a)
 print(doubler(a))
 print(tripler(a))
-    
+
+
+
+#%% PYTHON CLASSES/OBJECTS
+class myclass:
+    x = 5
+p1 = myclass()
+print(p1.x)
+
+
+#%%
+class Person():
+  def __init__(self,name,age,color):
+    self.name = name
+    self.age = agev
+    self.color = color
+new_person = Person('Julien Aganze',25,'Yellow')
+x = new_person.name
+print(x)    
+
+#%%
+print(7)
