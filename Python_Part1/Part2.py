@@ -111,16 +111,40 @@ class greeting:
         family.append(self.default)
         family.append(self.newcomer)
         for person in family:
-            print(f'Hello {person}!')
-            
+            print(f'Hello {person}!')      
 newperson = greeting('Julien Chambali')
 newperson.sayhello()     
 
 
 #%% EXERCISE 5 FUNCTIONS
-
+import random
+def random_list_summer():
+    list1 = []
+    for i in range(15):
+        x = random.randint(-100, 100)
+        list1.append(x)
+    y =sum(list1) 
+    print(list1)
+    print(y)
+random_list_summer()    
 
 #%% EXERCISE 6 FUNCTIONS
-
-
+def Fibonacci():
+    a = 0
+    b = 1
+    for i in range(5):
+        print(a)
+        c = a + b
+        a = b
+        b = c
+    
+Fibonacci()
 #%% EXERCISE 7 FUNCTIONS
+my_list= [*range(5)] 
+for x in my_list:
+    if x % 2 == 0:
+        y = lambda x: x**2
+        print(y(x))
+   # else:
+    #    print('you entered an odd number')
+
