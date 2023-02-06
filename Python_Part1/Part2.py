@@ -148,3 +148,94 @@ for x in my_list:
    # else:
     #    print('you entered an odd number')
 
+
+#%% EXERCISE 1 CLASSES AND OBJECTS
+class Animal():
+    def __init__(self, legs):
+        self.legs = legs
+        print("Animal object was created")
+    
+    def runs(self):
+        print('Runnig started')
+
+x = Animal(4)
+x.count_legs()
+print(x.return_legs())
+print("The number of legs is:",x._Animal__legs)
+x.runs()
+
+
+#%% EXERCISE 2 CLASSES AND OBJECTS
+class Animal():
+    def __init__(self, legs):
+        self.__legs = legs
+        #print("Animal object was created")
+    
+    def runs(self):
+        print('Runnig started')
+        
+    def count_legs(self):
+        print("The number of legs is:", self.__legs)
+        
+    def return_legs(self):
+        return self.__legs
+    
+x = Animal(4)
+print("The number of legs is:",x._Animal__legs)
+x.runs()    
+        
+
+
+#%% EXERCISE 3 CLASSES AND OBJECTS
+class Animal():
+    def __init__(self, legs):
+        self.__legs = legs
+        #print("Animal object was created")
+    
+    def runs(self):
+        print('Runnig started')
+        
+    def count_legs(self):
+        print("The number of legs is:", self.__legs)
+        
+    def return_legs(self):
+        return self.__legs
+
+            
+    
+x = Animal(4)
+print("The number of legs is:",x._Animal__legs)
+x.runs()    
+
+
+#%% EXERCISE 4 CLASSES AND OBJECTS
+class Animal():
+    def __init__(self, legs):
+        self.__legs = legs
+        #print("Animal object was created")
+    
+    def runs(self):
+        print('Runnig started')
+        
+    def count_legs(self):
+        print("The number of legs is:", self.__legs)
+        
+    def return_legs(self):
+        return self.__legs
+    
+class Dog(Animal):
+    def __init__(self, legs,name):
+        super().__init__(legs)
+        #Animal.__init__(legs,name)
+        
+        self.__name = name
+    
+    def bark(self):
+        print('woof woof')
+            
+    
+x = Dog(4,'Sam')
+print("The number of legs is:",x._Dog__name)
+print("The number of legs is:",x._Animal__legs)
+x.bark()
+#x.runs()    
